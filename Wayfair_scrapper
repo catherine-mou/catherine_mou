@@ -1,0 +1,118 @@
+{
+    "_id": "wayfair",
+    "startUrl": [
+        "https://www.wayfair.com/outdoor/sb0/hammocks-with-stands-c1864031.html"
+    ],
+    "selectors": [
+        {
+            "id": "links",
+            "type": "SelectorLink",
+            "parentSelectors": [
+                "_root",
+                "paginate"
+            ],
+            "selector": "a.ProductCardReviews",
+            "multiple": true,
+            "delay": 0
+        },
+        {
+            "id": "paginate",
+            "type": "SelectorLink",
+            "parentSelectors": [
+                "_root",
+                "paginate"
+            ],
+            "selector": "a.Pagination-icon--next",
+            "multiple": false,
+            "delay": 0
+        },
+        {
+            "id": "product_name",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": "h1",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "sold_by",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": ".ProductDetailInfoBlock-header-manu a",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "sale_price",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": ".StandardPriceBlock > div.BasePriceBlock",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "original_price",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": ".SuggestedRetailPrice span",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "features",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": ".ProductOverviewInformation-content div:nth-of-type(2) ul",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "no_of_reviews",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": ".ProductDetailInfoBlock-header-rating p.pl-ReviewStars-reviews",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "rating",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": "p[class=\"pl-VisuallyHidden\"]",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        },
+        {
+            "id": "product_details",
+            "type": "SelectorText",
+            "parentSelectors": [
+                "links"
+            ],
+            "selector": ".ProductOverviewInformation-content div:nth-of-type(3) ul",
+            "multiple": false,
+            "regex": "",
+            "delay": 0
+        }
+    ]
+}
